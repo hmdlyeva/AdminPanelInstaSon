@@ -9,10 +9,12 @@ import TableAdmin from "../tableAdmin/TableAdmin";
 import AddUser from "../addUserPage/AddUser";
 import PosterUsers from "../posterUsers/PosterUsers";
 import NnotificationPage from "../notificationPage/NnotificationPage";
+import './BottomNav.css'
+
 
 type Props = {};
 
-const BottomNav = (props: Props) => {
+const BottomNav = ({inpValue}:any) => {
   const [value, setValue] = React.useState("users");
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
@@ -20,7 +22,7 @@ const BottomNav = (props: Props) => {
   };
 
   return (
-    <>
+    <div className="bottomnav_div">
       {/* {value && value == "users" ? (
         <TableAdmin />
       ) : value == "adduser" ? (
@@ -31,22 +33,24 @@ const BottomNav = (props: Props) => {
         <NnotificationPage />
       )} */}
 
-      {value === "users" && <TableAdmin />}
+      {value === "users" && <TableAdmin  inpValue={inpValue}/>}
       {value === "adduser" && <AddUser />}
       {value === "posts" && <PosterUsers />}
       {value === "notification" && <NnotificationPage />}
       <BottomNavigation
-        sx={{ width: 500 }}
+        // sx={{ color:"orange" }}
         value={value}
         onChange={handleChange}
+        className="displayver"
       >
         <BottomNavigationAction
           label="Users"
           value="users"
             icon={<RestoreIcon />}
+          
         />
         <BottomNavigationAction
-          label="Add User"
+          label="Add"
           value="adduser"
             icon={<FavoriteIcon />}
         />
@@ -61,7 +65,7 @@ const BottomNav = (props: Props) => {
           icon={<FavoriteIcon />}
         />
       </BottomNavigation>
-    </>
+    </div>
   );
 };
 

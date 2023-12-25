@@ -51,7 +51,7 @@ const AdminPage = ({inpValue}:any) => {
   };
   return (
     <>
-    <div className="adminpage" style={{ overflow: "hidden"}} >
+    <div className="adminpage">
 
     <Box
       sx={{
@@ -59,7 +59,7 @@ const AdminPage = ({inpValue}:any) => {
         bgcolor: "background.paper",
         display: "flex",
         height:600,
-        
+        window:300
       }}
     >
       <Tabs
@@ -97,7 +97,7 @@ const AdminPage = ({inpValue}:any) => {
      </div>
      <div className="bottomnav">
 
-    <BottomNav/>
+    <BottomNav inpValue={inpValue}/>
      </div>
     </>
   );

@@ -8,6 +8,7 @@ import Typography from "@mui/material/Typography";
 import type { RootState } from "../../redux/store/store";
 import { useSelector, useDispatch } from "react-redux";
 import { DeletePoster } from "./../../redux/slice/userSlice";
+import './poster.css'
 type Props = {};
 interface Myposter {
   imgsrc: string;
@@ -19,7 +20,7 @@ const PosterUsers = (props: Props) => {
   const users = useSelector((state: RootState) => state.users.users);
   const dispatch = useDispatch();
   return (
-    <section id="poster_users_section" style={{ display: "flex", gap: "10px" }}>
+    <section id="poster_users_section" >
       {users.map((user) => (
         <div key={user.id} className="poster-user-card">
           {user.myposter!.map((poster: Myposter, index: number) => (

@@ -1,0 +1,14 @@
+/* .formum{
+    border: 1px solid red;
+} */
+
+@media (max-width: 992px) {
+    .formum {
+      flex-direction: column;
+    }
+   
+  }
+  
+  /* @media (min-width: 992px) {
+  
+  } */

@@ -1,7 +1,7 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
-
+import './AddUser.css'
 import IconButton from "@mui/material/IconButton";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import InputLabel from "@mui/material/InputLabel";
@@ -42,6 +42,7 @@ const AddUser = () => {
       }}
       noValidate
       autoComplete="off"
+      className="formum"
     >
       <div>
         <TextField
@@ -187,7 +188,11 @@ const AddUser = () => {
           }}
         />
 
-        <FormControl>
+
+      {/* </div> */}
+
+    
+      <FormControl>
           <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
           <RadioGroup
             aria-labelledby="demo-radio-buttons-group-label"
@@ -241,6 +246,9 @@ const AddUser = () => {
             />
           </RadioGroup>
         </FormControl>
+
+      </div>
+      <div>
 
         <Button onClick={handleAddUser} variant="contained" style={{backgroundColor:"orange"}}>
           Add User

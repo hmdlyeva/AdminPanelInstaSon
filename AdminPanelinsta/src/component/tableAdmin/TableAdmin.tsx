@@ -84,7 +84,7 @@ const TableAdmin = ({ inpValue }: any) => {
   // console.log(inpValue);
   let arr = Users.filter((user) => user.name.toLowerCase().includes(inpValue));
   return (
-    <section id="table_section" style={{border:"1px solid red"}}>
+    <section id="table_section" >
       {arr ? (
         <div className="table_css" style={{ height: 400, width: "100%" }}>
           <DataGrid

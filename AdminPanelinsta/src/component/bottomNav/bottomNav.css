@@ -1,0 +1,22 @@
+.bottomnav_div{
+    /* position: fixed; */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+    margin-top: 10px;
+}
+.displayver{
+    /* border:  1px solid red; */
+   position: fixed;
+   z-index: 1;
+   bottom: 0;
+   /* left: 0;
+   right: 0; */
+   max-width: fit-content;
+   display: flex;
+   justify-content: center;
+   gap: 0;
+   margin-top: 150px;
+   color: orange;
+   background-color: orange;
+}

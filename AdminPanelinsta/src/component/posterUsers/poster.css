@@ -1,0 +1,16 @@
+#poster_users_section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.poster-user-card{
+    
+    /* display: flex;
+    flex-wrap: wrap; */
+    /* max-width: 1000px; */
+    /* border: 1px solid red; */
+}
+
+
